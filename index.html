@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCC</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.0.0-web/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="app">
+        <div id="app__sidebar" class="app__sidebar">
+                <ul class="sidebar-list">
+                    <li class="sidebar__item">
+                        <a href="" class="sidebar__item-link">
+                            Home
+                        </a>
+                    </li>
+                    <li class="sidebar__item">
+                        <a href="" class="sidebar__item-link">
+                            Services
+                        </a>
+                    </li>
+                    <li class="sidebar__item">
+                        <a href="" class="sidebar__item-link">
+                            New
+                        </a>
+                    </li>
+                    <li class="sidebar__item">
+                        <a href="" class="sidebar__item-link">
+                            Blog
+                        </a>
+                    </li>
+                    <li class="sidebar__item">
+                        <a href="" class="sidebar__item-link">
+                            Concat
+                        </a>
+                    </li>
+                </ul>
+                <div id="mobile-sidebar" class="mobile-sidebar-btn">
+                    <i class="sidebar-ison fa-solid fa-bars"></i>
+                </div>
+        </div>
+        <div class="app__container">
+            <div class="grif">
+                <img src="./assets/img/logoNCC.png" alt="logoNCC" class="container_logo">
+                <div class="content">
+                    <h4 class="content__heading">Lorem ipsum dolor sit asmet?</h4>
+                    <p class="content__description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tristique consequat placerat. Vestibulum auctor pellentesque sem, eu posuere erat hendrerit quis. Maecenas vel consequat turpis. Nam facilisis, ligula in mattis sodales, augue justo tristique nulla, sed lacinia ante eros ut mi. Morbi vitae diam augue. Aliquam vel mauris a nibh auctor commodo. Praesent et nisi eu justo eleifend convallis. Quisque suscipit maximus vestibulum. Phasellus congue mollis orci, sit amet luctus augue tristique eu. Donec vulputate odio neque, sed semper turpis pellentesque a.
+                    </p>
+                </div>
+                <div class="product-wrap">
+                    <div class="product">
+                        <h3 class="product__heading">Lorem ipsum dolor sit amet</h3>
+                        <div class="product__body">
+                            <img src="./assets/img/css-icon.png" alt="" class="product__img">
+                            <span class="product__info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non dui sodales, faucibus libero ut, posuere felis. Donec imperdiet suscipit accumsan. Aenean consequat condimentum velit ut tempor. Nam porta massa in metus bibendum congue. Pellentesque ultrices liquam egestas nunc at ullamcorper ultricies. Donec feugiat velit nulla, vel sodales est ullamcorper id. Aenean consequat condimentum velit ut tempor. Nam porta massa in metus bibendum congue. Pellentesque ultrices vestibulum mattis.</span>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <h3 class="product__heading">Lorem ipsum dolor sit amet</h3>
+                        <div class="product__body">
+                            <img src="./assets/img/html-icon.png" alt="" class="product__img">
+                            <span class="product__info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non dui sodales, faucibus libero ut, posuere felis. Donec imperdiet suscipit accumsan. Aenean consequat condimentum velit ut tempor. Nam porta massa in metus bibendum congue. Pellentesque ultrices liquam egestas nunc at ullamcorper ultricies. Donec feugiat velit nulla, vel sodales est ullamcorper id. Aenean consequat condimentum velit ut tempor. Nam porta massa in metus bibendum congue. Pellentesque ultrices vestibulum mattis.</span>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <h3 class="product__heading">Lorem ipsum dolor sit amet</h3>
+                        <div class="product__body">
+                            <img src="./assets/img/url-icon.png" alt="" class="product__img">
+                            <span class="product__info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non dui sodales, faucibus libero ut, posuere felis. Donec imperdiet suscipit accumsan. Aenean consequat condimentum velit ut tempor. Nam porta massa in metus bibendum congue. Pellentesque ultrices liquam egestas nunc at ullamcorper ultricies. Donec feugiat velit nulla, vel sodales est ullamcorper id. Aenean consequat condimentum velit ut tempor. Nam porta massa in metus bibendum congue. Pellentesque ultrices vestibulum mattis.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="footer">
+                <p class="footer__text">Copyright © 2021</p>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        const sidebar = document.getElementById("app__sidebar");
+        const mobileMenu = document.getElementById("mobile-sidebar");
+        const sidebarHeight = sidebar.clientHeight;
+
+        mobileMenu.onclick = function() {
+            var isClosed = sidebar.clientHeight === sidebarHeight;
+            if (isClosed) {
+                sidebar.style.height = 'auto';
+            } else {
+                sidebar.style.height = null;
+
+            }
+        }
+
+        const menuItems = document.querySelectorAll('.sidebar__item-link')
+        for (var i = 0; i < menuItems.length; i++) {
+            var menuItem = menuItems[i]
+
+            menuItem.onclick = function () {
+                sidebar.style.height = null;
+
+            }
+        }
+    </script>
+
+</body>
+
+</html>
